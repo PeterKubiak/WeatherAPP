@@ -8,8 +8,8 @@ import ttkbootstrap
 
 #getting weather info function
 def get_weather(city):
-    API_key = "1a475dda0f97f1b1c2e0541da0f7e10a"
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_key}"
+    API_key = "{Your API KEY from}"
+    url = f"{Your url_adress from API website}"
     res = requests.get(url)
 
     if res.status_code == 404:
@@ -23,7 +23,7 @@ def get_weather(city):
     description = weather['weather'][0]['description']
     city = weather['name']
     country = weather['sys']['country']
-    icon_url = f"https://openweathermap.org/img/wn/{icon_id}@2x.png"
+    icon_url = f"{Your icon_url from API website, including {icon_id}}"
     return (icon_url, temperature, description, city, country)
 
 #searching function
